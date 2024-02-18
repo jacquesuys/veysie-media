@@ -1,5 +1,4 @@
-import blockContent from "./blockContent";
-import post from "./post";
 import section from "./section";
+import blockContent from "./blockContent";
 
-export const schemaTypes = [post, blockContent, section];
+export const schemaTypes = [section, blockContent];

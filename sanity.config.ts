@@ -29,6 +29,7 @@ export default defineConfig({
   dataset,
   plugins: [deskTool(), visionTool()],
   schema: {
+    // @ts-ignore
     types: schemaTypes,
   },
 });

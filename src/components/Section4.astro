@@ -1,0 +1,79 @@
+---
+import { getSection } from "../utils/sanity";
+import { PortableText } from "astro-portabletext";
+
+const section4NW = await getSection("section-4-nw");
+const section4N = await getSection("section-4-n");
+const section4NE = await getSection("section-4-ne");
+const section4SW = await getSection("section-4-sw");
+const section4S = await getSection("section-4-s");
+const section4SE = await getSection("section-4-se");
+---
+
+<section>
+  <div class="md:flex container section-spacing">
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="flex h-full items-center">
+        <h3 class="heading text-3xl">
+          {section4NW?.heading}
+        </h3>
+      </div>
+
+      <div>
+        <div class="flex gap-4">
+          <div class="icon icon-basic-settings"></div>
+          <div class="flex-col gap-4">
+            <h3 class="heading text-lg">{section4N?.heading}</h3>
+            <h4 class="thin-heading text-sm">{section4N?.subheading}</h4>
+          </div>
+        </div>
+        <PortableText value={section4N?.body as any} />
+      </div>
+
+      <div>
+        <div class="flex gap-4">
+          <div class="icon icon-basic-settings"></div>
+          <div class="flex-col gap-4">
+            <h3 class="heading text-lg">{section4NE?.heading}</h3>
+            <h4 class="thin-heading text-sm">{section4NE?.subheading}</h4>
+          </div>
+        </div>
+        <PortableText value={section4NE?.body as any} />
+      </div>
+
+      <div>
+        <div class="flex gap-4">
+          <div class="icon icon-basic-settings"></div>
+          <div class="flex-col gap-4">
+            <h3 class="heading text-lg">{section4SW?.heading}</h3>
+            <h4 class="thin-heading text-sm">{section4SW?.subheading}</h4>
+          </div>
+        </div>
+        <PortableText value={section4SW?.body as any} />
+      </div>
+
+      <div>
+        <div class="flex gap-4">
+          <div class="icon icon-basic-settings"></div>
+          <div class="flex-col gap-4">
+            <h3 class="heading text-lg">{section4S?.heading}</h3>
+            <h4 class="thin-heading text-sm">{section4S?.subheading}</h4>
+          </div>
+        </div>
+        <PortableText value={section4S?.body as any} />
+      </div>
+
+      <div>
+        <div class="flex gap-4">
+          <div class="icon icon-basic-settings"></div>
+          <div class="flex-col gap-4">
+            <h3 class="heading text-lg">{section4SE?.heading}</h3>
+            <h4 class="thin-heading text-sm">{section4SE?.subheading}</h4>
+          </div>
+        </div>
+        <PortableText value={section4SE?.body as any} />
+      </div>
+      <!-- END -->
+    </div>
+  </div>
+</section>

@@ -1,0 +1,18 @@
+---
+import { PortableText } from "astro-portabletext";
+import { getSection } from "../utils/sanity";
+const section9Right = await getSection("section-9-right");
+---
+
+<section class="section-spacing border-b border-gray-200 border-solid">
+  <div class="container">
+    <div class="w-full border border-solid border-black">Cover Image</div>
+    <div class="w-full flex flex-col gap-8 justify-center">
+      <h3 class="heading text-5xl">
+        {section9Right?.heading}
+      </h3>
+      <PortableText value={section9Right?.body as any} />
+      <button class="button">Buy Now</button>
+    </div>
+  </div>
+</section>

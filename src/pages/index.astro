@@ -1,69 +1,19 @@
 ---
 import Section2 from "../components/Section2.astro";
+import Section3 from "../components/Section3.astro";
+import Section4 from "../components/Section4.astro";
+import Section5 from "../components/Section5.astro";
+import Section6 from "../components/Section6.astro";
+import Section7 from "../components/Section7.astro";
+import Section8 from "../components/Section8.astro";
+import Section9 from "../components/Section9.astro";
+import Section10 from "../components/Section10.astro";
 import Layout from "../layouts/Layout.astro";
-import { getPosts, getPost } from "../utils/sanity";
-
-const posts = await getPosts();
 ---
 
 <Layout title="Welcome to Astro.">
   <Section2 />
-
-  <section class="w-full bg-gray-300">
-    <div class="md:max-w-[80%] md:mx-auto md:flex gap-8">
-      <div class="md:w-5/12 bg-gray-600">Cover Image</div>
-      <div class="md:w-7/12 flex flex-col p-4 md:pt-20 md:pl-20 md:pb-20">
-        <div class="w-full flex-col">
-          <h3 class="font-light text-3xl">
-            Nulla varius faucibus vestibulum. Sed imperdiet, tellus at iaculis
-          </h3>
-          <p class="copy">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco.
-          </p>
-        </div>
-        <div class="w-full grid md:grid-cols-2 gap-8">
-          <div class="flex gap-4">
-            <div class="icon icon-ecommerce-graph-increase"></div>
-            <div>
-              <h3 class="heading text-lg">SEO Friendly</h3>
-              <p class="copy">
-                Sed ut perspiciatis unde omnis iste nat eror acus antium que
-              </p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="icon icon-software-font-smallcaps"></div>
-            <div>
-              <h3 class="heading text-lg">SEO Friendly</h3>
-              <p class="copy">
-                Sed ut perspiciatis unde omnis iste nat eror acus antium que
-              </p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="icon icon-basic-mixer2"></div>
-            <div>
-              <h3 class="heading text-lg">SEO Friendly</h3>
-              <p class="copy">
-                Sed ut perspiciatis unde omnis iste nat eror acus antium que
-              </p>
-            </div>
-          </div>
-          <div class="flex gap-4">
-            <div class="icon icon-basic-bolt"></div>
-            <div>
-              <h3 class="heading text-lg">SEO Friendly</h3>
-              <p class="copy">
-                Sed ut perspiciatis unde omnis iste nat eror acus antium que
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Section3 />
 
   <section class="w-full bg-gray-100 py-4 md:py-10">
     <div class="flex gap-8 justify-center thin-heading text-lg">
@@ -71,197 +21,10 @@ const posts = await getPosts();
     </div>
   </section>
 
-  <section>
-    <div class="md:flex container section-spacing">
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="flex h-full items-center">
-          <h3 class="heading text-3xl">
-            <span class="font-light">Our</span> Services
-          </h3>
-        </div>
-        <div>
-          <div class="flex gap-4">
-            <div class="icon icon-basic-settings"></div>
-            <div class="flex-col gap-4">
-              <h3 class="heading text-lg">Service 1</h3>
-              <h4 class="thin-heading text-sm">Lorem Ipsum Dolor</h4>
-            </div>
-          </div>
-          <p class="copy">
-            Maecenas luctus nisi in sem fermentum blat. In nec elit solliudin,
-            elementum, dictum pur quam volutpat suscipit antena.
-          </p>
-        </div>
-        <div>
-          <div class="flex gap-4">
-            <div class="icon icon-basic-settings"></div>
-            <div class="flex-col gap-4">
-              <h3 class="heading text-lg">Service 1</h3>
-              <h4 class="thin-heading text-sm">Lorem Ipsum Dolor</h4>
-            </div>
-          </div>
-          <p class="copy">
-            Maecenas luctus nisi in sem fermentum blat. In nec elit solliudin,
-            elementum, dictum pur quam volutpat suscipit antena.
-          </p>
-        </div>
-        <div>
-          <div class="flex gap-4">
-            <div class="icon icon-basic-settings"></div>
-            <div class="flex-col gap-4">
-              <h3 class="heading text-lg">Service 1</h3>
-              <h4 class="thin-heading text-sm">Lorem Ipsum Dolor</h4>
-            </div>
-          </div>
-          <p class="copy">
-            Maecenas luctus nisi in sem fermentum blat. In nec elit solliudin,
-            elementum, dictum pur quam volutpat suscipit antena.
-          </p>
-        </div>
-        <div>
-          <div class="flex gap-4">
-            <div class="icon icon-basic-settings"></div>
-            <div class="flex-col gap-4">
-              <h3 class="heading text-lg">Service 1</h3>
-              <h4 class="thin-heading text-sm">Lorem Ipsum Dolor</h4>
-            </div>
-          </div>
-          <p class="copy">
-            Maecenas luctus nisi in sem fermentum blat. In nec elit solliudin,
-            elementum, dictum pur quam volutpat suscipit antena.
-          </p>
-        </div>
-        <div>
-          <div class="flex gap-4">
-            <div class="icon icon-basic-settings"></div>
-            <div class="flex-col gap-4">
-              <h3 class="heading text-lg">Service 1</h3>
-              <h4 class="thin-heading text-sm">Lorem Ipsum Dolor</h4>
-            </div>
-          </div>
-          <p class="copy">
-            Maecenas luctus nisi in sem fermentum blat. In nec elit solliudin,
-            elementum, dictum pur quam volutpat suscipit antena.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="flex flex-col gap-12 container section-spacing">
-      <div class="w-full">
-        <h3 class="heading text-3xl">
-          <span class="font-light">Our</span> Clients
-        </h3>
-      </div>
-      <div class="w-full flex flex-col gap-12 md:flex-row">
-        <div class="md:w-7/12 bg-gray-500">Client Tiles goes here</div>
-        <div class="md:w-5/12">
-          <quote class="font-light"
-            >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum,
-            maiores esse temporibus actium quas soluta quis sed rerum.</quote
-          >
-          <cite class="text-sm font-light"> - John Doe, Google Inc.</cite>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="bg-gray-300">
-    <div class="container section-spacing text-white">
-      <div class="md:w-1/3 flex flex-col gap-8 justify-center">
-        <h3 class="heading text-3xl text-white">
-          <span class="font-light">Work</span> Process
-        </h3>
-        <p class="copy">
-          Sed ut perspiciatis unde omnis iste nat eror acus antium que
-        </p>
-      </div>
-      <div class="md:w-2/3">
-        <div class="grid md:grid-cols-2 gap-12">
-          <div>
-            <div class="flex gap-4">
-              <div class="icon icon-basic-lightbulb"></div>
-              <div class="flex-col gap-4">
-                <h3 class="heading text-lg text-white">Service 1</h3>
-                <h4 class="thin-heading text-sm text-white">
-                  Lorem Ipsum Dolor
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="flex gap-4">
-              <div class="icon icon-basic-gear"></div>
-              <div class="flex-col gap-4">
-                <h3 class="heading text-lg text-white">Service 1</h3>
-                <h4 class="thin-heading text-sm text-white">
-                  Lorem Ipsum Dolor
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="flex gap-4">
-              <div class="icon icon-basic-laptop"></div>
-              <div class="flex-col gap-4">
-                <h3 class="heading text-lg text-white">Service 1</h3>
-                <h4 class="thin-heading text-sm text-white">
-                  Lorem Ipsum Dolor
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="flex gap-4">
-              <div class="icon icon-basic-paperplane"></div>
-              <div class="flex-col gap-4">
-                <h3 class="heading text-lg text-white">Service 1</h3>
-                <h4 class="thin-heading text-sm text-white">
-                  Lorem Ipsum Dolor
-                </h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="pt-20">
-    <div class="container md:flex-col">
-      <div class="w-full">
-        <h3 class="heading text-3xl">
-          <span class="font-light">Our</span> Team
-        </h3>
-      </div>
-
-      <div class="w-full grid md:grid-cols-3 gap-12">
-        <div>
-          <div class="bg-gray-600 h-[380px]"></div>
-          <div class="py-6 flex flex-col items-center">
-            <h3 class="heading text-base">Friendly Person 1</h3>
-            <p class="copy uppercase">VP Engineering</p>
-          </div>
-        </div>
-        <div>
-          <div class="bg-gray-600 h-[380px]"></div>
-          <div class="py-6 flex flex-col items-center">
-            <h3 class="heading text-base">Friendly Person 1</h3>
-            <p class="copy uppercase">VP Engineering</p>
-          </div>
-        </div>
-        <div>
-          <div class="bg-gray-600 h-[380px]"></div>
-          <div class="py-6 flex flex-col items-center">
-            <h3 class="heading text-base">Friendly Person 1</h3>
-            <p class="copy uppercase">VP Engineering</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Section4 />
+  <Section5 />
+  <Section6 />
+  <Section7 />
 
   <section class="w-full bg-gray-100 py-4 md:py-10">
     <div class="flex gap-8 justify-center thin-heading text-lg">
@@ -269,62 +32,9 @@ const posts = await getPosts();
     </div>
   </section>
 
-  <section class="py-10 border-b border-gray-200 border-solid">
-    <div class="container">
-      <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-2">
-        <div class="flex flex-col items-center">
-          <h3 class="font-light">75</h3>
-          <p class="text-base thin-heading">Awards</p>
-        </div>
-        <div class="flex flex-col items-center">
-          <h3 class="font-light">450</h3>
-          <p class="text-base thin-heading">Happy Clients</p>
-        </div>
-        <div class="flex flex-col items-center">
-          <h3 class="font-light">151</h3>
-          <p class="text-base thin-heading">Projects Done</p>
-        </div>
-        <div class="flex flex-col items-center">
-          <h3 class="font-light">768</h3>
-          <p class="text-base thin-heading">Hours of code</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-spacing border-b border-gray-200 border-solid">
-    <div class="container">
-      <div class="w-full border border-solid border-black">Cover Image</div>
-      <div class="w-full flex flex-col gap-8 justify-center">
-        <h3 class="heading text-5xl">
-          <span class="font-light">Optimized for</span> Mobile
-        </h3>
-        <p class="copy">
-          Sed ut perspiciatis unde omnis iste nat eror acus antium que.
-          Asperiores, ea velit enim labore doloribus.
-        </p>
-
-        <button class="button">Buy Now</button>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-spacing">
-    <div class="container">
-      <div class="w-full flex flex-col gap-8 justify-center">
-        <h3 class="heading text-5xl">
-          <span class="font-light">Powerful</span> Options
-        </h3>
-        <p class="copy">
-          Sed ut perspiciatis unde omnis iste nat eror acus antium que.
-          Asperiores, ea velit enim labore doloribus.
-        </p>
-
-        <button class="button">Buy Now</button>
-      </div>
-      <div class="w-full border border-solid border-black">Cover Image</div>
-    </div>
-  </section>
+  <Section8 />
+  <Section9 />
+  <Section10 />
 
   <section class="bg-gray-300 section-spacing">
     <div class="container justify-center thin-heading text-lg">

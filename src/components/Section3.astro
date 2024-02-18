@@ -1,0 +1,62 @@
+---
+import { getSection } from "../utils/sanity";
+import { PortableText } from "astro-portabletext";
+
+const section3RightNW = await getSection("section-3-right-nw");
+const section3RightNE = await getSection("section-3-right-ne");
+const section3RightSW = await getSection("section-3-right-sw");
+const section3RightSE = await getSection("section-3-right-se");
+const section3Top = await getSection("section-3-top");
+---
+
+<section class="w-full bg-gray-300">
+  <div class="md:max-w-[80%] md:mx-auto md:flex gap-8">
+    <div class="md:w-5/12 bg-gray-600">Cover Image</div>
+    <div class="md:w-7/12 flex flex-col p-4 md:pt-20 md:pl-20 md:pb-20">
+      <div class="w-full flex-col">
+        <h3 class="font-light text-3xl">
+          {section3Top.heading}
+        </h3>
+        <PortableText value={section3Top.body as any} />
+
+        <div class="w-full grid md:grid-cols-2 gap-8">
+          <div class="flex gap-4">
+            <div class="icon icon-ecommerce-graph-increase"></div>
+            <div>
+              <h3 class="heading text-lg">{section3RightNW?.heading}</h3>
+              <PortableText value={section3RightNW.body as any} />
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="icon icon-software-font-smallcaps"></div>
+            <div>
+              <h3 class="heading text-lg">{section3RightNE?.heading}</h3>
+              <PortableText value={section3RightNE?.body as any} />
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="icon icon-basic-bolt"></div>
+            <div>
+              <h3 class="heading text-lg">{section3RightSW?.heading}</h3>
+              <PortableText value={section3RightSW?.body as any} />
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="icon icon-basic-mixer2"></div>
+            <div>
+              <div>
+                <h3 class="heading text-lg">{section3RightSE?.heading}</h3>
+                <PortableText value={section3RightSE?.body as any} />
+              </div>
+            </div>
+          </div>
+
+          <!-- END -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

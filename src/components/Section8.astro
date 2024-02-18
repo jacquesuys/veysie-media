@@ -1,0 +1,30 @@
+---
+import { getSection } from "../utils/sanity";
+const section81 = await getSection("section-8-1");
+const section82 = await getSection("section-8-2");
+const section83 = await getSection("section-8-3");
+const section84 = await getSection("section-8-4");
+---
+
+<section class="py-10 border-b border-gray-200 border-solid">
+  <div class="container">
+    <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-2">
+      <div class="flex flex-col items-center">
+        <h3 class="font-light">{section81?.heading}</h3>
+        <p class="text-base thin-heading">{section81?.subheading}</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <h3 class="font-light">{section82?.heading}</h3>
+        <p class="text-base thin-heading">{section82?.subheading}</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <h3 class="font-light">{section83?.heading}</h3>
+        <p class="text-base thin-heading">{section83?.subheading}</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <h3 class="font-light">{section84?.heading}</h3>
+        <p class="text-base thin-heading">{section84?.subheading}</p>
+      </div>
+    </div>
+  </div>
+</section>

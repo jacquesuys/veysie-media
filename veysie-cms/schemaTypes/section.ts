@@ -26,6 +26,16 @@ export default defineType({
       type: "string",
     }),
     defineField({
+      name: "quote",
+      title: "Quote",
+      type: "string",
+    }),
+    defineField({
+      name: "cite",
+      title: "Cite",
+      type: "string",
+    }),
+    defineField({
       name: "subheading",
       title: "Sub Heading",
       type: "string",

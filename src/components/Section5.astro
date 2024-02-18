@@ -1,0 +1,22 @@
+---
+import { getSection } from "../utils/sanity";
+
+const section5 = await getSection("section-5");
+---
+
+<section>
+  <div class="flex flex-col gap-12 container section-spacing">
+    <div class="w-full">
+      <h3 class="heading text-3xl">
+        {section5?.heading}
+      </h3>
+    </div>
+    <div class="w-full flex flex-col gap-12 md:flex-row">
+      <div class="md:w-7/12 bg-gray-500">Client Tiles goes here</div>
+      <div class="md:w-5/12">
+        <quote class="font-light">{section5?.quote}</quote>
+        <cite class="text-sm font-light">{section5?.cite}</cite>
+      </div>
+    </div>
+  </div>
+</section>
