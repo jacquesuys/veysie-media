@@ -1,0 +1,40 @@
+---
+import { getPost } from "../utils/sanity";
+
+const section2Left = await getPost("section-2-left");
+---
+
+<section class="">
+  <div class="container section-spacing">
+    <div class="md:w-5/12 flex flex-col gap-6">
+      <quote class="font-light">{section2Left?.body}</quote>
+      <cite class="text-sm font-light">{section2Left?.subheading}</cite>
+    </div>
+    <div class="md:w-7/12 grid grid-cols-2 gap-8">
+      <div>
+        <h3 class="heading text-lg">One</h3>
+        <p class="copy">
+          Sed ut perspiciatis unde omnis iste nat eror acus antium que
+        </p>
+      </div>
+      <div>
+        <h3 class="heading text-lg">One</h3>
+        <p class="copy">
+          Sed ut perspiciatis unde omnis iste nat eror acus antium que
+        </p>
+      </div>
+      <div>
+        <h3 class="heading text-lg">One</h3>
+        <p class="copy">
+          Sed ut perspiciatis unde omnis iste nat eror acus antium que
+        </p>
+      </div>
+      <div>
+        <h3 class="heading text-lg">One</h3>
+        <p class="copy">
+          Sed ut perspiciatis unde omnis iste nat eror acus antium que
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
