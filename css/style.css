@@ -2225,6 +2225,19 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
   color:#4b4e53;
   font-weight:100;
 }
+.count-number-suffix{
+  margin-top: 17px;
+  margin-left: 8px;
+  font-size:45px;
+  line-height:45px;
+  color:#4b4e53;
+  font-weight:100;
+}
+.number-with-suffix {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
 .count-title {
   font-size:14px;
 }
@@ -3780,11 +3793,17 @@ background:none;
 /* #LOGO
 ================================================== */
 .logo-container {
-  width: 120px;
+  width: 80px;
 	background-color: #414146;
 	-webkit-transition: all .3s ease 0s;
 	-o-transition: all .3s ease 0s;
 	transition: all .3s ease 0s;
+}
+
+@media (min-width: 1025px) {
+  .logo-container {
+    width: 120px;
+  }
 }
 /* .logo-container-2 {
 	transition: all .3s ease 0s;
