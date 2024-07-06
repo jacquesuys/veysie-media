@@ -286,6 +286,10 @@ body {
 	-webkit-font-smoothing: antialiased !important;
 	-webkit-text-size-adjust: 100% !important;
 }
+.video-section video {
+  width: 100%;
+}
+
 .bold {
 	font-weight:bold !important;
 }
@@ -2966,9 +2970,9 @@ ul.contact-list li{
 /* #CONTACT FORM #NEW
 =====================================================*/
 .contact-form-cont {
-	position: relative;
-  max-width:550px;
-  padding:80px 50px 30px 60px;
+  position: relative;
+  max-width: 570px;
+  padding: 100px 50px 30px 110px;
 }
 .contact-form-container-left {
 	position: relative;
@@ -3757,7 +3761,7 @@ background:none;
 	box-shadow: 0 1px 15px rgba(0,0,0, .15);
 }
 .affix.black-header .header-wrapper {
-	background: #303236;
+	background: rgba(0,0,0, 0.25);
 }
 #nav-below.header {
 	position:relative;
@@ -3926,6 +3930,11 @@ header.affix .logo .logo-img {
 }
 .pos-relative {
 	position:relative;
+}
+
+.video-js {
+  width: 100%;
+  height: auto;
 }
 
 /* #NEWSLETTER NEW
@@ -7846,6 +7855,7 @@ h2.portfolio-timeline-title {
   }
 	.logo-2, .header.no-transparent .logo-2 {
 	  padding: 17px 0 17px 13px;
+		width: 70px;
 	}
 	.logo-row {
 		width:auto;
@@ -7988,7 +7998,7 @@ h2.portfolio-timeline-title {
     margin-bottom:0px; 
   }
   .header.black-header.mobile-no-transparent {
-    background:#303236;
+    background: rgba(0, 0, 0, 1);
   }
   .header .right-box-wrapper {
     text-align: right;
@@ -11237,4 +11247,30 @@ ul#flickr-feeds li a, ul#flickr-sfeeds li a img {
 }
 .shop-ad-height {
   height:200px;
+}
+
+.video-section {
+  position: relative;
+}
+
+.video-section .text-overlay {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.text-overlay h2.animated-text {
+  color: white;
+  font-size: 50px;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: all 1s linear;
+}
+
+.text-overlay h2.animated-text.fadeIn {
+  opacity: 100;
+  transform: scale(1);
+  transition: all 0.5s linear;
 }
